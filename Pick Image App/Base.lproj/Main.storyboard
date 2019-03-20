@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pick_Image_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4qB-XR-1eW">
+                                <rect key="frame" x="68" y="67" width="239" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="7eB-en-GFA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="239" id="ECX-fy-2gF"/>
+                                    <constraint firstAttribute="width" constant="239" id="GE7-Ld-muP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytY-ro-j2g">
+                                <rect key="frame" x="150" y="40" width="75" height="30"/>
+                                <state key="normal" title="Pick Image"/>
+                                <connections>
+                                    <action selector="pickImage" destination="BYZ-38-t0r" eventType="touchDown" id="DjA-fC-byA"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIY-mk-c3l">
+                                <rect key="frame" x="163" y="220" width="49" height="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="upload" destination="BYZ-38-t0r" eventType="touchDown" id="75T-Fr-Lf0"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4Ex-14-jer">
+                                <rect key="frame" x="177.5" y="225" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4qB-XR-1eW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Sn-wj-HSR"/>
+                            <constraint firstItem="OIY-mk-c3l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="5pm-bI-3gZ"/>
+                            <constraint firstItem="4Ex-14-jer" firstAttribute="top" secondItem="4qB-XR-1eW" secondAttribute="bottom" constant="13" id="Cip-Vb-G4J"/>
+                            <constraint firstItem="OIY-mk-c3l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="J1F-il-jIP"/>
+                            <constraint firstItem="ytY-ro-j2g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="R6l-47-Hxd"/>
+                            <constraint firstItem="4Ex-14-jer" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yrp-TD-74f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OIY-mk-c3l" secondAttribute="trailing" constant="163" id="aVQ-8U-hFa"/>
+                            <constraint firstItem="ytY-ro-j2g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geE-Zo-hHk"/>
+                            <constraint firstItem="4qB-XR-1eW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="kT8-Nd-gw6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnPick" destination="ytY-ro-j2g" id="bEw-NF-4Mg"/>
+                        <outlet property="btnUpload" destination="OIY-mk-c3l" id="2Ex-0D-nds"/>
+                        <outlet property="ictLoading" destination="4Ex-14-jer" id="JSb-Bf-G8k"/>
+                        <outlet property="imgPicked" destination="4qB-XR-1eW" id="MXY-60-ciD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
